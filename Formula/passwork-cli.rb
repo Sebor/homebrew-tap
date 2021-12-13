@@ -5,50 +5,46 @@
 class PassworkCli < Formula
   desc "Command Line Interface tool for https://passwork.me/"
   homepage "https://github.com/Sebor/passwork-cli"
-  version "1.0.4"
+  version "1.0.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Sebor/passwork-cli/releases/download/v1.0.4/passwork-cli_1.0.4_darwin_amd64.tar.gz"
-      sha256 "4a792df56bfdc55d9f71611eb4244b229a24d6919060936bacf61dac4c7540df"
+      url "https://github.com/Sebor/passwork-cli/releases/download/v1.0.5/passwork-cli_1.0.5_darwin_amd64.tar.gz"
+      sha256 "27ead2aba8ce0102ff4a82d7cd4d01ee28cdef5791d1a76e86c3fc8330729638"
 
       def install
         bin.install "passwork"
-        prefix.install "README.md"
         bash_completion.install "autocomplete/bash_autocomplete" => "passwork"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Sebor/passwork-cli/releases/download/v1.0.4/passwork-cli_1.0.4_darwin_arm64.tar.gz"
-      sha256 "a554fecb8a95f4b41e795cb73f67572772315099320411d72826c0b8d135d962"
+      url "https://github.com/Sebor/passwork-cli/releases/download/v1.0.5/passwork-cli_1.0.5_darwin_arm64.tar.gz"
+      sha256 "a5563db91280428d45889a2830fb4464529aeee4e153d070294c2827a4e4444b"
 
       def install
         bin.install "passwork"
-        prefix.install "README.md"
         bash_completion.install "autocomplete/bash_autocomplete" => "passwork"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Sebor/passwork-cli/releases/download/v1.0.4/passwork-cli_1.0.4_linux_arm64.tar.gz"
-      sha256 "4ee2462b8e79a1029cb007d3a6b084195640d980d71c51352e8620db5bb0a475"
+    if Hardware::CPU.intel?
+      url "https://github.com/Sebor/passwork-cli/releases/download/v1.0.5/passwork-cli_1.0.5_linux_amd64.tar.gz"
+      sha256 "202241fc6b4261fce796bc9529de433a15ee21efcf028472f756f0980950748f"
 
       def install
         bin.install "passwork"
-        prefix.install "README.md"
         bash_completion.install "autocomplete/bash_autocomplete" => "passwork"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Sebor/passwork-cli/releases/download/v1.0.4/passwork-cli_1.0.4_linux_amd64.tar.gz"
-      sha256 "52f55f18215e9aece33d1a9c582e008733bbc152c5edddcfb2a44d094ccc0a9f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Sebor/passwork-cli/releases/download/v1.0.5/passwork-cli_1.0.5_linux_arm64.tar.gz"
+      sha256 "b025c025a5b6bbf0fd2501473c4046841767e48f025ce149cdacdfaa15ba5a22"
 
       def install
         bin.install "passwork"
-        prefix.install "README.md"
         bash_completion.install "autocomplete/bash_autocomplete" => "passwork"
       end
     end
