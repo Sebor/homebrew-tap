@@ -1,4 +1,4 @@
-class PassworkCLI < Formula
+class PassworkCli < Formula
   desc "Command Line Interface tool for https://passwork.me/"
   homepage "https://github.com/Sebor/passwork-cli"
   url "https://github.com/Sebor/passwork-cli/releases/download/v1.0.0/passwork-cli_1.0.0_darwin_amd64.tar.gz"
